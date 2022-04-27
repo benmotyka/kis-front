@@ -10,14 +10,18 @@
       content="Keep IT Secure to konkurs dla szkół średnich organizowany przez koło naukowe SAITS - Something About IT Politechniki Rzeszowskiej. Jesteśmy grupą studentów zainteresowanych bezpieczeństwem systemów i sieci komputerowych, testami penetracyjnymi, ochroną tożsamości i bezpieczeństwem informacji. Działamy na Politechnice Rzeszowskiej od 2012 roku. "
     />
     <title>Keep IT Secure - konkurs dla szkół średnich</title>
-    <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
     <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"
-      defer
-    ></script>
-    <script src="script.js" defer></script>
+    <script src="scripts/_gsap.min.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/hero-animation.js" defer></script>
     <script src="scripts/topics.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -31,9 +35,6 @@
               <a href="#partners" class="navbar-link">Partnerzy</a>
             </li>
             <li class="navbar-item">
-              <a href="#topic" class="navbar-link">Tematyka</a>
-            </li>
-            <li class="navbar-item">
               <a href="#join" class="navbar-link">Zapisz się</a>
             </li>
             <!-- <li class="navbar-item">
@@ -44,35 +45,38 @@
       </div>
     </header>
     <section id="hero">
-      <div class="circle circle-sm">
+      <div id="circle-sm" class="circle">
         <img src="assets/circle-sm.png" alt="Circle" />
       </div>
-      <div class="circle circle-lg">
+      <div id="circle-lg" class="circle">
         <img src="assets/circle-lg.png" alt="Circle" />
       </div>
 
       <main class="container">
         <div class="content">
-          <div class="hero-text">
+          <div id="hero-text">
             <h1>Keep <span>IT</span> Secure</h1>
             <h2>Konkurs dla szkół średnich</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium animi blanditiis cumque ea, error esse eveniet harum
-              illo magnam minus natus neque optio placeat quibusdam ratione
-              saepe sint tenetur voluptas!
+              Accusantium animi blanditiis cumque ea, error esse eveniet harum. Konkurs organizowany jest <b>24 maja 2022 r.</b> na Politechnice Rzeszowskiej.
             </p>
-            <button class="button hero-button" href="#">Zapisz się</button>
+            <a href="#join">
+              <button class="button hero-button">Zapisz się</button>
+            </a>
           </div>
-          <div class="logo-wrapper">
+          <div id="logo-wrapper">
             <img id="hero-logo" src="assets/hero-logo.png" alt="" />
           </div>
         </div>
-        <div class="organisators">
+        <div id="organisators-hero">
           <p class="darker">
             Organizowany przez koło naukowe Politechniki Rzeszowskiej
           </p>
-          <a href="http://saits.prz.edu.pl"
+          <a
+            href="http://saits.prz.edu.pl"
+            target="_blank"
+            rel="noopener noreferrer"
             ><img id="saits-logo" src="assets/saits-logo.png" alt=""
           /></a>
         </div>
@@ -83,11 +87,71 @@
         <div class="layer layer-2"></div>
         <div class="layer layer-3"></div>
       </div>
-    </section>
-
-    <section id="topic-section">
-      <h2 class="text-center">Tematyka pytań</h2>
       <main id="topics"></main>
     </section>
+
+    <section id="partners">
+      <h2>Organizatorzy wydarzenia</h2>
+      <a
+        href="http://saits.prz.edu.pl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="main-partner-img" src="assets/partners/saits.png" />
+      </a>
+      <div class="partner-images-wrapper">
+        <a href="http://prz.edu.pl/" target="_blank" rel="noopener noreferrer">
+          <img class="uni-img" src="assets/partners/logo_prz.png"
+        /></a>
+        <a
+          href="http://weii.prz.edu.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img class="uni-img" src="assets/partners/logo_weii.png"
+        /></a>
+      </div>
+      <h3>Partnerzy wydarzenia</h3>
+      <div class="partner-images-wrapper">
+        <a
+          href="https://www.paloaltonetworks.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img class="partner-img" src="assets/partners/paloalto.png" />
+        </a>
+        <a
+          href="https://portal.pti.org.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img class="partner-img" src="assets/partners/pti.png" />
+        </a>
+      </div>
+      <h4>
+        Honorowy patronat podkarpackiego <br />
+        kuratora oświaty
+      </h4>
+      <a
+        href="https://www.ko.rzeszow.pl/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="partner-img" src="assets/partners/ko_rzeszow.png" />
+      </a>
+
+      <div id="circle-lg-2" class="circle dark-circle">
+        <img src="assets/circle-lg.png" alt="Circle" />
+      </div>
+    </section>
+    <section id="join">
+      <div id="circle-lg-3" class="circle dark-circle">
+        <img src="assets/circle-lg.png" alt="Circle" />
+      </div>
+      <div id="circle-sm-2" class="circle">
+        <img src="assets/circle-sm.png" alt="Circle" />
+      </div>
+    </section>
+    <footer></footer>
   </body>
 </html>

@@ -22,13 +22,11 @@ const balls = [];
 
 const section = document.getElementById('topics')
 
-console.log(section)
-
 topics.forEach(topic => {
     const ball = document.createElement("div");
     ball.classList.add("ball");
-    ball.style.left = `${Math.floor(Math.random() * 70) + 10}%`;
-    ball.style.top = `${Math.floor(Math.random() * 60) + 10}%`;
+    ball.style.left = `${Math.floor(Math.random() * 80) + 5}%`;
+    ball.style.top = `${Math.floor(Math.random() * 85) + 5}%`;
     ball.style.transform = `scale(${Math.random()})`;
     ball.innerHTML=topic
     balls.push(ball);
@@ -37,8 +35,8 @@ topics.forEach(topic => {
 
 balls.forEach((el, i, ra) => {
   let to = {
-    x: Math.random() * (i % 2 === 0 ? -100 : 100),
-    y: Math.random() * 100
+    x: Math.random() * (i % 2 === 0 ? -150 : 150),
+    y: Math.random() * 150
   };
 
   el.animate(
@@ -47,7 +45,7 @@ balls.forEach((el, i, ra) => {
       { transform: `translate(${to.x}px, ${to.y}px)` }
     ],
     {
-      duration: (Math.random() + 1) * 2000, // random duration
+      duration: (Math.random() + 1) * 4000,
       direction: "alternate",
       fill: "both",
       iterations: Infinity,
