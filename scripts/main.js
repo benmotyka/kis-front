@@ -39,19 +39,31 @@ form.addEventListener("submit", async (event) => {
       icon: "error",
     });
   }
-button.innerHTML = 'Wysyłanie...'
-button.disabled = true
-button.classList.add("button-disabled");
-  const result = await sendMessage()
+  button.innerHTML = "Wysyłanie...";
+  button.disabled = true;
+  button.classList.add("button-disabled");
 
-button.innerHTML = 'Wysłano!'
+  Email.send({
+    SecureToken: "ba9db934-19ed-4fdf-a5a7-ccd7f8e223bb",
+    To: "benmotykax@gmail.com",
+    From: "randomowyemailbena@spoko.pl",
+    Subject: "Keep IT Secure Message",
+    Body: `Nadawca: ${emailInput.value} (${nameInput.value})
+    Wysyła wiadomość temacie: 
+    ${subjectInput.value}
+
+    oraz treści:
+    ${messageInput.value}`,
+  }).then(() => {
+    button.innerHTML = "Wysłano!";
+    emailInput.value = "";
+    nameInput.value = "";
+    subjectInput.value = "";
+    messageInput.value = "";
     swal({
       title: "Sukces!",
       text: "Wiadomość wysłana pomyślnie!",
       icon: "success",
     });
+  });
 });
-
-const sendMessage = async () => {
-    await new Promise((res) => setTimeout(res, 1000))
-};

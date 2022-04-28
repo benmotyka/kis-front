@@ -43,7 +43,7 @@ header {
 }
 
 section {
-  width: 100vw;
+  width: 100%;
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
@@ -239,7 +239,7 @@ img#hero-logo {
 
 main#topics {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
@@ -306,7 +306,7 @@ section#contact {
   flex-direction: column;
 }
 footer {
-  width: 100vw;
+  width: 100%;
   background-color: var(--main-bg);
   display: flex;
 }
@@ -335,9 +335,9 @@ form#contact-form {
   background-color: var(--main-bg);
   border-radius: 15px;
   border: 3px solid var(--darkerGreen);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 30px;
-  grid-template-columns: auto;
 }
 
 input {
@@ -485,11 +485,16 @@ textarea {
   }
 
   main#contact-form-wrapper {
-    column-gap: 20px;
-    padding: 20px;
+    padding: 0;
   }
 
-  section#contact {
-    padding: 10px;
+  form#contact-form {
+    padding: 15px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #contact-form h4 {
+    font-size: 30px;
   }
 }
