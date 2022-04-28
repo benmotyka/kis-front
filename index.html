@@ -12,6 +12,7 @@
     <title>Keep IT Secure - konkurs dla szkół średnich</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts/_gsap.min.js" defer></script>
+    <script src="scripts/_swal.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script src="scripts/hero-animation.js" defer></script>
     <script src="scripts/topics.js" defer></script>
@@ -35,7 +36,7 @@
               <a href="#partners" class="navbar-link">Partnerzy</a>
             </li>
             <li class="navbar-item">
-              <a href="#join" class="navbar-link">Zapisz się</a>
+              <a href="#contact" class="navbar-link">Kontakt</a>
             </li>
             <!-- <li class="navbar-item">
               <a href="terms.html" class="navbar-link">Regulamin</a>
@@ -58,12 +59,13 @@
             <h1>Keep <span>IT</span> Secure</h1>
             <h2>Konkurs dla szkół średnich</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium animi blanditiis cumque ea, error esse eveniet harum. Konkurs organizowany jest <b>24 maja 2022 r.</b> na Politechnice Rzeszowskiej.
+              Konkurs odbędzie się <b>24 maja 2022 r.</b> na Politechnice
+              Rzeszowskiej.
             </p>
-            <a href="#join">
-              <button class="button hero-button">Zapisz się</button>
-            </a>
+
+            <button class="button hero-button">
+              <a href="#contact">Zapisz się</a>
+            </button>
           </div>
           <div id="logo-wrapper">
             <img id="hero-logo" src="assets/hero-logo.png" alt="" />
@@ -93,6 +95,7 @@
     <section id="partners">
       <h2>Organizatorzy wydarzenia</h2>
       <a
+        class="image-center-wrapper"
         href="http://saits.prz.edu.pl"
         target="_blank"
         rel="noopener noreferrer"
@@ -144,7 +147,19 @@
         <img src="assets/circle-lg.png" alt="Circle" />
       </div>
     </section>
-    <section id="join">
+    <section id="contact">
+      <main id="contact-form-wrapper">
+        <form id="contact-form">
+          <h4>Formularz zgłoszeniowy</h4>
+          <input type="email" placeholder="E-mail"" />
+          <input type="text" placeholder="Imię" />
+          <input type="text" placeholder="Temat" />
+          <textarea placeholder="Treść wiadomości" ></textarea>
+          <button class="button">Wyślij</button>
+        </form>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.7270015540688!2d21.984866753342857!3d50.02667202173806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfbaefe222183%3A0x6a590633671c25c4!2sWydzia%C5%82%20Elektrotechniki%20i%20Informatyki%20Politechniki%20Rzeszowskiej!5e1!3m2!1sen!2spl!4v1613586487965!5m2!1sen!2spl"></iframe>
+
+      </main>
       <div id="circle-lg-3" class="circle dark-circle">
         <img src="assets/circle-lg.png" alt="Circle" />
       </div>
@@ -152,6 +167,12 @@
         <img src="assets/circle-sm.png" alt="Circle" />
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <div class="subfooter-wrapper">
+        <span id="copyright"
+          >SAITS © <span id="year"></span> wszelkie prawa zastrzeżone.</span
+        >
+      </div>
+    </footer>
   </body>
 </html>

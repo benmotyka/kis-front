@@ -17,6 +17,14 @@ const topics = [
     "SSL",
     "Certyfikaty",
     "Bezpieczeństwo",
+    "DNS",
+    "Klucz U2F",
+    "Proxy",
+    "Spoofing",
+    "Protokoły",
+    "Malware",
+    "DDoS",
+    "Sniffery",
 ]
 const balls = [];
 

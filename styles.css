@@ -10,12 +10,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--white);
 }
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -95,7 +100,6 @@ ul#navbar-list {
 .circle {
   position: absolute;
   transition: 0.2s filter ease-in-out;
-  filter: opacity(0.1) drop-shadow(0 0 0 var(--green));
 }
 
 .dark-circle {
@@ -104,21 +108,24 @@ ul#navbar-list {
 
 #circle-sm {
   top: -150px;
-  left: -200px;
-}
+  left: -200px; 
+  filter: opacity(0.2) drop-shadow(0 0 0 var(--green));
+} 
 
 #circle-sm-2 {
   right: -300px;
   bottom: -100px;
+  filter: opacity(0.2) drop-shadow(0 0 0 var(--green));
 }
 
 #circle-lg {
-  bottom: -1100px;
-  right: -800px;
+  bottom: -500px;
+  left:  1200px;
+  filter: opacity(0.1) drop-shadow(0 0 0 var(--green));
 }
 
 #circle-lg-2 {
-  bottom:  -560px;
+  bottom: -560px;
   left: -1120px;
 }
 
@@ -128,12 +135,12 @@ ul#navbar-list {
 }
 
 img#saits-logo {
-    width: 500px;
-    margin: 25px 0;
+  width: 500px;
+  margin: 25px 0;
 }
 
 .darker {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .content {
@@ -142,30 +149,6 @@ img#saits-logo {
   align-items: center;
   position: relative;
   z-index: 10;
-}
-
-@media screen and (max-width: 1000px) {
-  .content {
-    flex-direction: column-reverse;
-  }
-
-  #hero-text {
-    text-align: center;
-  }
-
-.container {
-  padding: 0;
-}
-
-.navbar-item {
-  margin: 0 5px;
-  font-size: 20px;
-}
-
-header {
- padding: 0 10px;
-}
-
 }
 
 #hero-text {
@@ -213,6 +196,11 @@ img#hero-logo {
 
 .button:hover {
   opacity: 1;
+}
+
+.image-center-wrapper {
+  display: grid;
+  place-items: center;
 }
 
 .overlay {
@@ -272,9 +260,11 @@ section#partners {
   row-gap: 20px;
 }
 
-#partners h2, h3, h4 {
+#partners h2,
+h3,
+h4 {
   font-size: 36px;
-  color:  var(--white);
+  color: var(--white);
   opacity: 0.8;
   text-transform: uppercase;
   text-align: center;
@@ -304,15 +294,201 @@ section#partners {
   place-items: center;
 }
 
-.partner-img{
+.partner-img {
   width: 250px;
 }
 
-section#join {
+section#contact {
+  width: 100%;
   background-color: var(--secondary-bg);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 footer {
   width: 100vw;
-  height: 300px;
   background-color: var(--main-bg);
+  display: flex;
 }
+
+.subfooter-wrapper {
+  font-size: 18px;
+  margin: auto auto 0 auto;
+  padding: 20px 0;
+}
+
+.subfooter-wrapper span#copyright {
+  opacity: 0.5;
+}
+
+main#contact-form-wrapper {
+  width: 100%;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  padding: 50px 100px;
+}
+
+form#contact-form {
+  padding: 25px;
+  background-color: var(--main-bg);
+  border-radius: 15px;
+  border: 3px solid var(--darkerGreen);
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: auto;
+}
+
+input {
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-bg);
+}
+
+textarea {
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-bg);
+  resize: none;
+  height: 120px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--darkerGreen);
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  main#contact-form-wrapper {
+    column-gap: 50px;
+    padding: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+
+  #hero-text {
+    text-align: center;
+  }
+
+  .container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  section#hero {
+    padding: 100px 0;
+  }
+
+  div#organisators-hero {
+    margin-top: 100px;
+  }
+
+  button.hero-button {
+    margin: 0 auto;
+  }
+
+
+  div#organisators-hero p {
+    text-align: center;
+  }
+
+  div#organisators-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  main#contact-form-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .navbar-item {
+    margin: 0 5px;
+    font-size: 20px;
+  }
+
+  header {
+    padding: 0 10px;
+  }
+
+  img#hero-logo {
+    height: 300px;
+    top: 0;
+  }
+
+  img#saits-logo {
+    width: 300px;
+  }
+
+  section#partners {
+    width: 100%;
+    padding: 25px;
+  }
+
+
+.main-partner-img {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.uni-img {
+  width: 200px;
+}
+
+.partner-images-wrapper {
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+}
+
+.partner-img {
+  width: 200px;
+}
+
+#partners h2 {
+  font-size: 26px;
+}
+
+#partners h3 {
+  font-size: 22px;
+}
+
+#partners h4 {
+  font-size: 20px;
+}
+
+main#contact-form-wrapper {
+  column-gap: 20px;
+  padding: 20px;
+}
+
+section#contact {
+  padding: 10px;
+}
+}
+
