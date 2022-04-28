@@ -108,9 +108,9 @@ ul#navbar-list {
 
 #circle-sm {
   top: -150px;
-  left: -200px; 
+  left: -200px;
   filter: opacity(0.2) drop-shadow(0 0 0 var(--green));
-} 
+}
 
 #circle-sm-2 {
   right: -300px;
@@ -120,7 +120,7 @@ ul#navbar-list {
 
 #circle-lg {
   bottom: -500px;
-  left:  1200px;
+  left: 1200px;
   filter: opacity(0.1) drop-shadow(0 0 0 var(--green));
 }
 
@@ -187,7 +187,7 @@ img#hero-logo {
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity, color ease-in-out;
 }
 
 .hero-button {
@@ -372,7 +372,6 @@ textarea {
     column-gap: 50px;
     padding: 50px;
   }
-  
 }
 
 @media screen and (max-width: 1000px) {
@@ -405,7 +404,6 @@ textarea {
     margin: 0 auto;
   }
 
-
   div#organisators-hero p {
     text-align: center;
   }
@@ -425,8 +423,13 @@ textarea {
   }
 }
 
-@media screen and (max-width: 700px) {
+.button-disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.3;
+}
 
+@media screen and (max-width: 700px) {
   .navbar-item {
     margin: 0 5px;
     font-size: 20px;
@@ -450,45 +453,43 @@ textarea {
     padding: 25px;
   }
 
+  .main-partner-img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
 
-.main-partner-img {
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
-}
+  .uni-img {
+    width: 200px;
+  }
 
-.uni-img {
-  width: 200px;
-}
+  .partner-images-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
 
-.partner-images-wrapper {
-  grid-template-columns: 1fr;
-  row-gap: 25px;
-}
+  .partner-img {
+    width: 200px;
+  }
 
-.partner-img {
-  width: 200px;
-}
+  #partners h2 {
+    font-size: 26px;
+  }
 
-#partners h2 {
-  font-size: 26px;
-}
+  #partners h3 {
+    font-size: 22px;
+  }
 
-#partners h3 {
-  font-size: 22px;
-}
+  #partners h4 {
+    font-size: 20px;
+  }
 
-#partners h4 {
-  font-size: 20px;
-}
+  main#contact-form-wrapper {
+    column-gap: 20px;
+    padding: 20px;
+  }
 
-main#contact-form-wrapper {
-  column-gap: 20px;
-  padding: 20px;
+  section#contact {
+    padding: 10px;
+  }
 }
-
-section#contact {
-  padding: 10px;
-}
-}
-
