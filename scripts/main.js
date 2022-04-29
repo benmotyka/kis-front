@@ -45,7 +45,7 @@ form.addEventListener("submit", async (event) => {
 
   Email.send({
     SecureToken: "ba9db934-19ed-4fdf-a5a7-ccd7f8e223bb",
-    To: "benmotykax@gmail.com",
+    To: "160780@stud.prz.edu.pl",
     From: "randomowyemailbena@spoko.pl",
     Subject: "Keep IT Secure Message",
     Body: `Nadawca: ${emailInput.value} (${nameInput.value})
@@ -54,7 +54,8 @@ form.addEventListener("submit", async (event) => {
 
     oraz treści:
     ${messageInput.value}`,
-  }).then(() => {
+  }).then((message) => {
+    console.log(message)
     button.innerHTML = "Wysłano!";
     emailInput.value = "";
     nameInput.value = "";

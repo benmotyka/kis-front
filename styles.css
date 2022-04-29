@@ -327,7 +327,7 @@ main#contact-form-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 100px;
-  padding: 50px 100px;
+  padding: 50px;
 }
 
 form#contact-form {
@@ -360,11 +360,31 @@ textarea {
   height: 120px;
 }
 
-#map {
+#how-to-join {
   width: 100%;
   height: 100%;
-  border: 3px solid var(--darkerGreen);
-  border-radius: 15px;
+  row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#how-to-join ol {
+  padding: 0;
+  font-size: 26px;
+}
+
+#how-to-join h5 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#how-to-join li {
+  margin: 20px 0;
+}
+
+.color-link {
+  color: var(--green);
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {
@@ -384,6 +404,9 @@ textarea {
     text-align: center;
   }
 
+  #hero-text p {
+    text-align: left;
+  }
   .container {
     padding: 0;
     display: flex;
