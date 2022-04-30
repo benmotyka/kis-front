@@ -17,7 +17,7 @@
     <script src="scripts/main.js" defer></script>
     <script src="scripts/hero-animation.js" defer></script>
     <script src="scripts/topics.js" defer></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,7 @@
       <div class="container">
         <nav id="navbar">
           <a href="index.html"
-            ><img id="navbar-icon" src="/assets/navbar-logo.png"
+            ><img id="navbar-icon" src="/assets/kis-logo.png"
           /></a>
           <ul id="navbar-list">
             <li class="navbar-item">
@@ -39,9 +39,6 @@
             <li class="navbar-item">
               <a href="#contact" class="navbar-link">Kontakt</a>
             </li>
-            <!-- <li class="navbar-item">
-              <a href="terms.html" class="navbar-link">Regulamin</a>
-            </li> -->
           </ul>
         </nav>
       </div>
@@ -60,8 +57,9 @@
             <h1>Keep <span>IT</span> Secure</h1>
             <h2>Olimpiada informatyczna dla szkół średnich</h2>
             <p>
-              Tematyka konkursu obejmuje szeroko pojętą wiedzę informatyczną, w szczególności cyberbezpieczeństwo. Wydarzenie odbędzie się <b>24 maja 2022 r.</b> na Politechnice
-              Rzeszowskiej.
+              Tematyka konkursu obejmuje szeroko pojętą wiedzę informatyczną, w
+              szczególności cyberbezpieczeństwo. Wydarzenie odbędzie się
+              <b>24 maja 2022 r.</b> na Politechnice Rzeszowskiej.
             </p>
 
             <button class="button hero-button">
@@ -151,18 +149,36 @@
     <section id="contact">
       <main id="contact-form-wrapper">
         <div id="how-to-join">
+          <h5>Kto może wziąć udział?</h5>
+          <p>
+            W olimpiadzie mogą wziąć udział wszyscy uczniowie szkół średnich,
+            bez względu na profil czy kierunek.
+          </p>
           <h5>Jak wziąć udział?</h5>
-          <ol>
-            <li>Zapoznaj się z regulaminem dostępnym <a class="color-link" target="_blank" href="/assets/regulamin.pdf">tutaj</a>.</li>
-            <li>Wypełnij formularz zgłoszeniowy</li>
-          </ol>
-      </div>
-        <form  id="contact-form">
+          <p>
+            Wystarczy, że zapoznasz się z regulaminem dostępnym
+            <a class="color-link" target="_blank" href="/assets/regulamin.pdf"
+              >tutaj</a
+            >, oraz zgłoszisz swoją szkołę poprzez wypełnienie formularza
+            zgłoszeniowego lub bezpośrednio na adres e-mail
+            <a class="color-link" href="mailto:sasit@prz.edu.pl"
+              >sasit@prz.edu.pl</a
+            >.
+          </p>
+          <p>
+            W treści wiadomości podaj nazwę szkoły średniej, klasę oraz
+            miejscowość. Odezwiemy się z wiadomością zwrotną tak szybko jak to
+            możliwe.
+          </p>
+          <p></p>
+        </div>
+
+        <form id="contact-form">
           <h4>Formularz zgłoszeniowy</h4>
           <input id="email" type="email" placeholder="E-mail"" />
           <input id="name" type="text" placeholder="Imię" />
           <input id="subject" type="text" placeholder="Temat" />
-          <textarea id="message" placeholder="Treść wiadomości" ></textarea>
+          <textarea id="message" placeholder="Treść wiadomości"></textarea>
           <button type="submit" id="form-button" class="button">Wyślij</button>
         </form>
       </main>
@@ -174,6 +190,43 @@
       </div>
     </section>
     <footer>
+      <main>
+        <div class="footer-col">
+          <a href="index.html">
+            <img id="footer-kis-logo" src="/assets/kis-logo.png" />
+          </a>
+          <div class="social-container">
+            <p>fb</p>
+            <p>ig</p>
+            <p>tw</p>
+          </div>
+          <a href="index.html"
+            ><img id="footer-saits-logo" src="/assets/saits-logo.png"
+          /></a>
+          <div class="social-container">
+            <p>fb</p>
+            <p>ig</p>
+            <p>tw</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Sekcje</h5>
+          <ul class="footer-list">
+            <li><a href="#partners">Partnerzy</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li>
+              <a target="_blank" href="/assets/regulamin.pdf">Regulamin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kontakt</h5>
+          <ul class="footer-list">
+            <li><a href="mailto:sasit@prz.edu.pl">sasit@prz.edu.pl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">Furrion</div>
+      </main>
       <div class="subfooter-wrapper">
         <span id="copyright"
           >SAITS © <span id="year"></span> wszelkie prawa zastrzeżone.</span

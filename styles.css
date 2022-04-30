@@ -309,16 +309,62 @@ footer {
   width: 100%;
   background-color: var(--main-bg);
   display: flex;
+  flex-direction: column;
+}
+
+footer main {
+  background-color: var(--main-bg);
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  padding: 100px 50px 200px;
 }
 
 .subfooter-wrapper {
   font-size: 18px;
-  margin: auto auto 0 auto;
+  border-top: 2px solid var(--secondary-bg);
+  width: 100%;
+  text-align: center;
   padding: 20px 0;
 }
 
 .subfooter-wrapper span#copyright {
   opacity: 0.5;
+}
+
+div.footer-col{
+  display: flex;
+  flex-direction: column;
+}
+
+img#footer-kis-logo {
+  height: 120px;
+}
+
+img#footer-saits-logo {
+  height: 40px;
+  margin-left: 15px;
+}
+
+div.social-container {
+display: flex;
+flex-wrap: wrap;
+column-gap: 10px;
+margin: 15px 0 50px;
+padding-left: 15px;
+}
+
+div.footer-col h5 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+ul.footer-list {
+  list-style: none;
+}
+
+ul.footer-list li {
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 main#contact-form-wrapper {
