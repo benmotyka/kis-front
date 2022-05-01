@@ -23,6 +23,11 @@ a {
   text-decoration: none;
 }
 
+input, textarea {
+width:100%;
+display:block
+}
+
 body {
   background-color: var(--main-bg);
   overflow-x: hidden;
@@ -432,6 +437,7 @@ form#contact-form {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  height: max-content;
 }
 
 input {
@@ -623,7 +629,7 @@ textarea {
   }
 
   #contact-form h4 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   footer main {
