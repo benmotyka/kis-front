@@ -66,6 +66,7 @@ section {
 
 #navbar {
   width: 100%;
+  padding: 25px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -316,7 +317,7 @@ footer main {
   background-color: var(--main-bg);
   display: grid;
   grid-template-columns: 30% 20% 20% 30%;
-  padding: 100px 50px 200px;
+  padding: 50px;
 }
 
 .subfooter-wrapper {
@@ -336,21 +337,42 @@ div.footer-col{
   flex-direction: column;
 }
 
+form#newsletter-form{
+  display: flex;
+  flex-direction: column;
+}
+
+p#newsletter-desc {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
 img#footer-kis-logo {
-  height: 120px;
+  height: 40px;
+}
+
+input#newsletter-email{
+  padding: 10px;
+  font-size: 16px;
+  width: 75%;
+  margin-bottom: 15px;
+}
+
+
+button#newsletter-button{
+  padding: 10px;
+  font-size: 16px;
+  width: 100px;
 }
 
 img#footer-saits-logo {
-  height: 40px;
-  margin-left: 15px;
+  height: 30px;
 }
 
 div.social-container {
 display: flex;
 flex-wrap: wrap;
 column-gap: 10px;
-margin: 15px 0 50px;
-padding-left: 15px;
+margin: 15px 0 25px;
 }
 
 div.footer-col h5 {
@@ -362,9 +384,35 @@ ul.footer-list {
   list-style: none;
 }
 
+ul.footer-list a {
+  transition: 0.2s color ease-in-out;
+  }
+
+ul.footer-list a:hover {
+color: var(--green);
+}
+
+
 ul.footer-list li {
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 18px;
+}
+
+.social-container .social-icon {
+  width: 20px;
+  height: 20px;
+  filter: opacity(0.4) drop-shadow(0 0 0 var(--white));
+  margin: 0 5px;
+  transition: 0.2s filter ease-in-out;
+}
+.social-container .social-icon:hover {
+  filter: opacity(0.4) drop-shadow(0 0 0 var(--green));
+}
+
+.button-disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 main#contact-form-wrapper {
@@ -438,6 +486,10 @@ textarea {
     column-gap: 50px;
     padding: 50px;
   }
+
+  p#newsletter-desc {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -490,12 +542,19 @@ textarea {
     row-gap: 50px;
     grid-template-rows: 1fr 1fr;
   }
-}
 
-.button-disabled {
-  cursor: auto;
-  pointer-events: none;
-  opacity: 0.3;
+  footer main {
+    background-color: var(--main-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 50px;
+    row-gap: 50px;
+  }
+
+  div#footer-social-wrapper {
+    grid-row-start: 2;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -565,5 +624,14 @@ textarea {
 
   #contact-form h4 {
     font-size: 30px;
+  }
+
+  footer main {
+    background-color: var(--main-bg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 50px;
+    row-gap: 50px;
   }
 }

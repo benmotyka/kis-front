@@ -1,11 +1,15 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 const form = document.getElementById("contact-form");
+const newsletterForm = document.getElementById("newsletter-form");
 const button = document.getElementById("form-button");
 
 const emailInput = document.getElementById("email");
 const nameInput = document.getElementById("name");
 const subjectInput = document.getElementById("subject");
 const messageInput = document.getElementById("message");
+
+const newsletterEmailInput = document.getElementById("newsletter-email");
+const newsletterButton = document.getElementById("newsletter-button");
 
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -68,3 +72,25 @@ form.addEventListener("submit", async (event) => {
     });
   });
 });
+
+newsletterForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!emailRegex.test(newsletterEmailInput.value)) {
+    return swal({
+      title: "Błędny email!",
+      icon: "error",
+    });
+  }
+  newsletterButton.innerHTML = "Zapisywanie...";
+  newsletterButton.disabled = true;
+  newsletterButton.classList.add("button-disabled");
+
+  newsletterButton.innerHTML = "Zapisano!";
+  newsletterEmailInput.value = "";
+  swal({
+    title: "Sukces!",
+    text: "Zapisano do newslettera!",
+    icon: "success",
+  });
+})
