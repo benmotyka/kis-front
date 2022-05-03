@@ -17,6 +17,7 @@
     <script src="scripts/main.js" defer></script>
     <script src="scripts/hero-animation.js" defer></script>
     <script src="scripts/topics.js" defer></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -159,7 +160,7 @@
             Wystarczy, że zapoznasz się z regulaminem dostępnym
             <a class="color-link" target="_blank" href="/assets/regulamin.pdf"
               >tutaj</a
-            >, oraz zgłoszisz swoją szkołę poprzez wypełnienie formularza
+            >, a następnie zgłosisz swoją szkołę poprzez wypełnienie formularza
             zgłoszeniowego lub bezpośrednio na adres e-mail
             <a class="color-link" href="mailto:sasit@prz.edu.pl"
               >sasit@prz.edu.pl</a
@@ -167,9 +168,11 @@
           </p>
           <p>
             W treści wiadomości podaj nazwę szkoły średniej, klasę oraz
-            miejscowość. Odezwiemy się z wiadomością zwrotną tak szybko jak to
+            miejscowość. Odezwiemy się z wiadomością zwrotną tak szybko, jak to
             możliwe.
           </p>
+          <h5>Nagrody</h5>
+          <p>Dla pięciu zwycięzców przewidziane są nagrody o łącznej wartości blisko 2 tys. zł, takie jak: dysk SSD, klucze U2F, książki, pendrive'y biometryczne i nie tylko. </p>
         </div>
         <form id="contact-form">
           <h4>Formularz zgłoszeniowy</h4>
@@ -177,6 +180,7 @@
           <input id="name" type="text" placeholder="Imię" />
           <input id="subject" type="text" placeholder="Temat" />
           <textarea id="message" placeholder="Treść wiadomości"></textarea>
+          <div id="captcha" class="h-captcha" data-sitekey="4c06a02d-4657-4f09-89d8-a6eb83b3a244"></div>
           <button type="submit" id="form-button" class="button">Wyślij</button>
         </form>
       </main>

@@ -7,6 +7,7 @@ const emailInput = document.getElementById("email");
 const nameInput = document.getElementById("name");
 const subjectInput = document.getElementById("subject");
 const messageInput = document.getElementById("message");
+// const captcha = document.querySelector("div[data-automation]")
 
 const newsletterEmailInput = document.getElementById("newsletter-email");
 const newsletterButton = document.getElementById("newsletter-button");
@@ -43,33 +44,41 @@ form.addEventListener("submit", async (event) => {
       icon: "error",
     });
   }
+
+  if (!window.hcaptcha.getResponse()) {
+    return swal({
+      title: "Wypełnij CAPTCHA!",
+      icon: "error",
+    });
+  }
+
   button.innerHTML = "Wysyłanie...";
   button.disabled = true;
   button.classList.add("button-disabled");
 
-  Email.send({
-    SecureToken: "ba9db934-19ed-4fdf-a5a7-ccd7f8e223bb",
-    To: "160780@stud.prz.edu.pl",
-    From: "randomowyemailbena@spoko.pl",
-    Subject: "Keep IT Secure Message",
-    Body: `Nadawca: ${emailInput.value} (${nameInput.value})
-    Wysyła wiadomość temacie: 
-    ${subjectInput.value}
-
-    oraz treści:
-    ${messageInput.value}`,
-  }).then((message) => {
-    console.log(message)
-    button.innerHTML = "Wysłano!";
-    emailInput.value = "";
-    nameInput.value = "";
-    subjectInput.value = "";
-    messageInput.value = "";
-    swal({
-      title: "Sukces!",
-      text: "Wiadomość wysłana pomyślnie!",
-      icon: "success",
-    });
+  await fetch("http://localhost:3001/kis/contact", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      senderEmail: emailInput.value,
+      senderName: nameInput.value,
+      subject: subjectInput.value,
+      message: messageInput.value,
+      captcha: window.hcaptcha.getResponse()
+    })
+  });
+  button.innerHTML = "Wysłano!";
+  emailInput.value = "";
+  nameInput.value = "";
+  subjectInput.value = "";
+  messageInput.value = "";
+  swal({
+    title: "Sukces!",
+    text: "Wiadomość wysłana pomyślnie!",
+    icon: "success",
   });
 });
 
@@ -93,4 +102,4 @@ newsletterForm.addEventListener("submit", async (event) => {
     text: "Zapisano do newslettera!",
     icon: "success",
   });
-})
+});
