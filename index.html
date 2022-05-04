@@ -172,7 +172,11 @@
             możliwe.
           </p>
           <h5>Nagrody</h5>
-          <p>Dla pięciu zwycięzców przewidziane są nagrody o łącznej wartości blisko 2 tys. zł, takie jak: dysk SSD, klucze U2F, książki, pendrive'y biometryczne i nie tylko. </p>
+          <p>
+            Dla pięciu zwycięzców przewidziane są nagrody o łącznej wartości
+            blisko 2 tys. zł, takie jak: dysk SSD, klucze U2F, książki,
+            pendrive'y biometryczne i nie tylko.
+          </p>
         </div>
         <form id="contact-form">
           <h4>Formularz zgłoszeniowy</h4>
@@ -180,8 +184,16 @@
           <input id="name" type="text" placeholder="Imię" />
           <input id="subject" type="text" placeholder="Temat" />
           <textarea id="message" placeholder="Treść wiadomości"></textarea>
-          <div id="captcha" class="h-captcha" data-sitekey="4c06a02d-4657-4f09-89d8-a6eb83b3a244"></div>
-          <button type="submit" id="form-button" class="button">Wyślij</button>
+          <button
+            type="submit"
+            id="form-button"
+            class="button h-captcha"
+            data-sitekey="4c06a02d-4657-4f09-89d8-a6eb83b3a244"
+            data-callback="contactForm"
+            data-size="invisible"
+          >
+            Wyślij
+          </button>
         </form>
       </main>
       <div id="circle-lg-3" class="circle dark-circle">
@@ -198,28 +210,32 @@
             <img id="footer-kis-logo" src="/assets/kis-logo.png" />
           </a>
           <div class="social-container">
-            <a target="_blank" href="https://www.facebook.com/keepitsecure.prz/">
-              <img class="social-icon" src="assets/social-icons/fb.svg"/>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/keepitsecure.prz/"
+            >
+              <img class="social-icon" src="assets/social-icons/fb.svg" />
             </a>
           </div>
-          <a
-            ><img id="footer-saits-logo" src="/assets/saits-logo.png"
-          /></a>
+          <a><img id="footer-saits-logo" src="/assets/saits-logo.png" /></a>
           <div class="social-container">
             <a target="_blank" href="https://discord.gg/QWtaJzweZd">
-              <img class="social-icon" src="assets/social-icons/dc.svg"/>
+              <img class="social-icon" src="assets/social-icons/dc.svg" />
             </a>
             <a target="_blank" href="https://www.facebook.com/SAITSPRz">
-              <img class="social-icon" src="assets/social-icons/fb.svg"/>
+              <img class="social-icon" src="assets/social-icons/fb.svg" />
             </a>
             <a target="_blank" href="https://www.instagram.com/saits.prz/">
-              <img class="social-icon" src="assets/social-icons/ig.svg"/>
+              <img class="social-icon" src="assets/social-icons/ig.svg" />
             </a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCoUdn059OkXrwJ8qHBlD9eA">
-              <img class="social-icon" src="assets/social-icons/yt.svg"/>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCoUdn059OkXrwJ8qHBlD9eA"
+            >
+              <img class="social-icon" src="assets/social-icons/yt.svg" />
             </a>
             <a target="_blank" href="https://saits.prz.edu.pl/">
-              <img class="social-icon" src="assets/social-icons/website.svg"/>
+              <img class="social-icon" src="assets/social-icons/website.svg" />
             </a>
           </div>
         </div>
@@ -255,11 +271,22 @@
         </div>
         <div class="footer-col">
           <h5>Newsletter</h5>
-          <p id="newsletter-desc">Otrzymuj powiadomienia o kolejnych wydarzeniach </p>
+          <p id="newsletter-desc">
+            Otrzymuj powiadomienia o kolejnych wydarzeniach
+          </p>
           <form id="newsletter-form">
-          <input id="newsletter-email" type="email" placeholder="E-mail"" />
-          <button id="newsletter-button" type="submit" id="newsletter-form-button" class="button">Zapisz</button>
-        </form>
+            <input id="newsletter-email" type="email" placeholder="E-mail"" />
+            <button
+              id="newsletter-button"
+              class="button h-captcha"
+              type="submit"
+              data-sitekey="4c06a02d-4657-4f09-89d8-a6eb83b3a244"
+              data-callback="newsletterForm"
+              data-size="invisible"
+            >
+              Zapisz
+            </button>
+          </form>
         </div>
       </main>
       <div class="subfooter-wrapper">

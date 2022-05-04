@@ -1,6 +1,4 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
-const form = document.getElementById("contact-form");
-const newsletterForm = document.getElementById("newsletter-form");
 const button = document.getElementById("form-button");
 
 const emailInput = document.getElementById("email");
@@ -12,11 +10,11 @@ const messageInput = document.getElementById("message");
 const newsletterEmailInput = document.getElementById("newsletter-email");
 const newsletterButton = document.getElementById("newsletter-button");
 
+const apiUrl = 'https://saits-api.herokuapp.com'
+
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
+async function contactForm (captchaToken) {
   if (!emailRegex.test(emailInput.value)) {
     return swal({
       title: "Błędny email!",
@@ -56,7 +54,7 @@ form.addEventListener("submit", async (event) => {
   button.disabled = true;
   button.classList.add("button-disabled");
 
-  await fetch("http://localhost:3001/kis/contact", {
+  await fetch(`${apiUrl}/kis/contact`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -67,7 +65,7 @@ form.addEventListener("submit", async (event) => {
       senderName: nameInput.value,
       subject: subjectInput.value,
       message: messageInput.value,
-      captcha: window.hcaptcha.getResponse()
+      captcha: captchaToken
     })
   });
   button.innerHTML = "Wysłano!";
@@ -80,11 +78,9 @@ form.addEventListener("submit", async (event) => {
     text: "Wiadomość wysłana pomyślnie!",
     icon: "success",
   });
-});
+};
 
-newsletterForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
+async function newsletterForm (captchaToken) {
   if (!emailRegex.test(newsletterEmailInput.value)) {
     return swal({
       title: "Błędny email!",
@@ -95,6 +91,18 @@ newsletterForm.addEventListener("submit", async (event) => {
   newsletterButton.disabled = true;
   newsletterButton.classList.add("button-disabled");
 
+  await fetch(`${apiUrl}/kis/newsletter`, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: newsletterEmailInput.value,
+      captcha: captchaToken
+    })
+  });
+
   newsletterButton.innerHTML = "Zapisano!";
   newsletterEmailInput.value = "";
   swal({
@@ -102,4 +110,4 @@ newsletterForm.addEventListener("submit", async (event) => {
     text: "Zapisano do newslettera!",
     icon: "success",
   });
-});
+};
