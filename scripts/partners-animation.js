@@ -14,8 +14,8 @@ const animatePartners = async () => {
     "#organizer-saits",
     "#organizer-prz",
     "#organizer-weii",
-    "#organizer-paloalto",
     "#organizer-pti",
+    "#organizer-paloalto",
     "#organizer-ko"
   ]
   imagesDelay = 0.3 // s
