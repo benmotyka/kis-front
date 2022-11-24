@@ -10,7 +10,8 @@ const messageInput = document.getElementById("message");
 const newsletterEmailInput = document.getElementById("newsletter-email");
 const newsletterButton = document.getElementById("newsletter-button");
 
-const apiUrl = 'https://saits-api.herokuapp.com'
+// const API_URL = 'https://saits-api.herokuapp.com'
+const API_URL = 'https://web-production-d361.up.railway.app'
 
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -54,7 +55,7 @@ async function contactForm (captchaToken) {
   button.disabled = true;
   button.classList.add("button-disabled");
 
-  await fetch(`${apiUrl}/kis/contact`, {
+  await fetch(`${API_URL}/kis/contact`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -91,7 +92,7 @@ async function newsletterForm (captchaToken) {
   newsletterButton.disabled = true;
   newsletterButton.classList.add("button-disabled");
 
-  await fetch(`${apiUrl}/kis/newsletter`, {
+  await fetch(`${API_URL}/kis/newsletter`, {
     method: "POST",
     mode: "cors",
     headers: {
