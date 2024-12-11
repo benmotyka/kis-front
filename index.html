@@ -1,89 +1,85 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/assets/favicon.ico" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Keep IT Secure to konkurs dla szkół średnich organizowany przez koło naukowe SAITS - Something About IT Politechniki Rzeszowskiej. Jesteśmy grupą studentów zainteresowanych bezpieczeństwem systemów i sieci komputerowych, testami penetracyjnymi, ochroną tożsamości i bezpieczeństwem informacji. Działamy na Politechnice Rzeszowskiej od 2012 roku. "
-    />
-    <title>Keep IT Secure - konkurs dla szkół średnich</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="scripts/_gsap.min.js" defer></script>
-    <script src="scripts/_swal.min.js" defer></script>
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/hero-animation.js" defer></script>
-    <script src="scripts/partners-animation.js" defer></script>
-    <script src="scripts/topics.js" defer></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav id="navbar">
-          <a href="index.html"
-            ><img id="navbar-icon" src="/assets/kis-logo.png" alt="kis logo"
-          /></a>
-          <ul id="navbar-list">
-            <li class="navbar-item">
-              <a href="#partners" class="navbar-link">Partnerzy</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#contact" class="navbar-link">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Keep IT Secure to konkurs dla szkół średnich organizowany przez koło naukowe SAITS - Something About IT Politechniki Rzeszowskiej. Jesteśmy grupą studentów zainteresowanych bezpieczeństwem systemów i sieci komputerowych, testami penetracyjnymi, ochroną tożsamości i bezpieczeństwem informacji. Działamy na Politechnice Rzeszowskiej od 2012 roku. " />
+  <title>Keep IT Secure - konkurs dla szkół średnich</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts/_gsap.min.js" defer></script>
+  <script src="scripts/_swal.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/hero-animation.js" defer></script>
+  <script src="scripts/partners-animation.js" defer></script>
+  <script src="scripts/topics.js" defer></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav id="navbar" aria-label="Main Navigation">
+        <a href="index.html">
+          <img id="navbar-icon" src="/assets/kis-logo.png" alt="Keep IT Secure logo" />
+        </a>
+        <ul id="navbar-list">
+          <li class="navbar-item">
+            <a href="#partners" class="navbar-link">Partnerzy</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
     <section id="hero">
+      <!-- Existing hero content with improved image alt texts -->
       <div id="circle-sm" class="circle">
-        <img src="assets/circle-sm.png" alt="Circle" />
+        <img src="assets/circle-sm.png" alt="" aria-hidden="true" />
       </div>
       <div id="circle-lg" class="circle">
-        <img src="assets/circle-lg.png" alt="Circle" />
+        <img src="assets/circle-lg.png" alt="" aria-hidden="true" />
       </div>
 
-      <main class="container">
+      <div class="container">
         <div class="content">
           <div id="hero-text">
             <h1>Keep <span>IT</span> Secure</h1>
             <h2>Olimpiada informatyczna dla szkół średnich</h2>
             <p>
               Tematyka konkursu obejmuje szeroko pojętą wiedzę informatyczną, w
-              szczególności cyberbezpieczeństwo. 
-              <br/><br/>Wydarzenie odbędzie się
+              szczególności cyberbezpieczeństwo.
+              <br /><br />Wydarzenie odbędzie się
               <b>25 kwietnia 2024 r.</b> na Wydziale Elektrotechniki i Informatyki Politechniki Rzeszowskiej.
             </p>
 
-            <button class="button hero-button">
+            <button class="button hero-button" aria-label="Zapisz się na konkurs">
               <a href="#contact">Zapisz się</a>
             </button>
           </div>
           <div id="logo-wrapper">
-            <img id="hero-logo" src="assets/hero-logo.png" alt="hero logo" />
+            <img id="hero-logo" src="assets/hero-logo.png" alt="Keep IT Secure logo z grafiką" />
           </div>
         </div>
         <div id="organisators-hero">
           <p class="darker">
             Organizowany przez koło naukowe Politechniki Rzeszowskiej
           </p>
-          <a
-            href="http://saits.prz.edu.pl"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img id="saits-logo" src="assets/saits-logo.png" alt="logo saits"
-          /></a>
+          <a href="http://saits.prz.edu.pl" target="_blank" rel="noopener noreferrer"><img id="saits-logo"
+              src="assets/saits-logo.png" alt="logo saits" /></a>
         </div>
-      </main>
+      </div>
 
       <div class="overlay">
         <div class="layer layer-1"></div>
@@ -95,60 +91,31 @@
 
     <section id="partners">
       <h2>Organizatorzy wydarzenia</h2>
-      <a
-        class="image-center-wrapper"
-        href="http://saits.prz.edu.pl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img 
-        id="organizer-saits"
-        class="main-partner-img" 
-        src="assets/partners/saits.png"
-        alt="logo saits" />
+      <a class="image-center-wrapper" href="http://saits.prz.edu.pl" target="_blank" rel="noopener noreferrer">
+        <img id="organizer-saits" class="main-partner-img" src="assets/partners/saits.png" alt="logo saits" />
       </a>
       <div class="partner-images-wrapper">
         <a href="http://prz.edu.pl/" target="_blank" rel="noopener noreferrer">
-          <img 
-          id="organizer-prz"
-          class="uni-img" src="assets/partners/logo_prz.png"
-          alt="logo Politechniki Rzeszowskiej"
-        /></a>
-        <a
-          href="http://weii.prz.edu.pl/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img 
-          id="organizer-weii"
-          class="uni-img" src="assets/partners/logo_weii.png"
-          alt="logo Wydziału Elektrotechniki i Informatyki"
-        /></a>
-        <a
-          href="https://portal.pti.org.pl/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img 
-          id="organizer-pti"
-          class="partner-img" src="assets/partners/pti.png" alt="logo Polskiego Towarzystwa Informatycznego"/>
+          <img id="organizer-prz" class="uni-img" src="assets/partners/logo_prz.png"
+            alt="logo Politechniki Rzeszowskiej" /></a>
+        <a href="http://weii.prz.edu.pl/" target="_blank" rel="noopener noreferrer">
+          <img id="organizer-weii" class="uni-img" src="assets/partners/logo_weii.png"
+            alt="logo Wydziału Elektrotechniki i Informatyki" /></a>
+        <a href="https://portal.pti.org.pl/" target="_blank" rel="noopener noreferrer">
+          <img id="organizer-pti" class="partner-img" src="assets/partners/pti.png"
+            alt="logo Polskiego Towarzystwa Informatycznego" />
         </a>
-    </div>
+      </div>
 
       <h3>Partnerzy wydarzenia</h3>
       <div id="main-partners" class="partner-images-wrapper">
-        <a
-          href="https://pcinn.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img 
-          id="organizer-paloalto"
-          class="partner-img" src="assets/partners/pci-logo.png" alt="logo Podkarpackiego Centrum Innowacji"/>
+        <a href="https://pcinn.org/" target="_blank" rel="noopener noreferrer">
+          <img id="organizer-paloalto" class="partner-img" src="assets/partners/pci-logo.png"
+            alt="logo Podkarpackiego Centrum Innowacji" />
         </a>
 
       </div>
- <!---     <h4>
+      <!---     <h4>
         Honorowy patronat podkarpackiego <br />
         kuratora oświaty
       </h4>
@@ -177,9 +144,8 @@
           <h5>Jak wziąć udział?</h5>
           <p>
             Wystarczy, że zapoznasz się z regulaminem dostępnym
-            <a class="color-link" target="_blank" href="/assets/regulamin.pdf"
-              >tutaj</a
-            >, a następnie zgłosisz swoją szkołę poprzez wypełnienie formularza
+            <a class="color-link" target="_blank" href="/assets/regulamin.pdf">tutaj</a>, a następnie zgłosisz swoją
+            szkołę poprzez wypełnienie formularza
             zgłoszeniowego <!--lub bezpośrednio na adres e-mail
             <a class="color-link" href="mailto:saits.prz@gmail.com"
               >saits.prz@gmail.com</a
@@ -188,14 +154,16 @@
           <p>
             W treści wiadomości podaj nazwę szkoły średniej, klasę oraz
             miejscowość. Odezwiemy się z wiadomością zwrotną tak szybko, jak to
-            możliwe.            
+            możliwe.
           </p>
         </div>
 
         <form id="contact-form">
           <h4>Formularz zgłoszeniowy</h4>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdAFmirIIix6AR69mGtzp7jxUTt1fHAQL6oJgQFQ0pBkYBp6A/viewform?embedded=true" height="582" frameborder="0" marginheight="0" marginwidth="0">�aduj�</iframe>
-         <!-- <input id="email" type="email" placeholder="E-mail"" />
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdAFmirIIix6AR69mGtzp7jxUTt1fHAQL6oJgQFQ0pBkYBp6A/viewform?embedded=true"
+            height="582" frameborder="0" marginheight="0" marginwidth="0">�aduj�</iframe>
+          <!-- <input id="email" type="email" placeholder="E-mail"" />
           <input id="name" type="text" placeholder="Imię" />
           <input id="subject" type="text" placeholder="Temat" />
           <textarea id="message" placeholder="Treść wiadomości"></textarea>
@@ -226,10 +194,8 @@
             <img id="footer-kis-logo" src="/assets/kis-logo.png" alt="logo Keep It Secure" />
           </a>
           <div class="social-container">
-            <a
-              target="_blank"
-              href="https://www.facebook.com/events/1304424477088471/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22left_rail%22%2C%22surface%22%3A%22bookmark%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=open_invite_flow&show_created_event_toast=true/"
-            >
+            <a target="_blank"
+              href="https://www.facebook.com/events/1304424477088471/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22left_rail%22%2C%22surface%22%3A%22bookmark%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=open_invite_flow&show_created_event_toast=true/">
               <img class="social-icon" src="assets/social-icons/fb.svg" alt="logo Facebook" />
             </a>
           </div>
@@ -239,15 +205,12 @@
               <img class="social-icon" src="assets/social-icons/dc.svg" alt="logo Discord" />
             </a>
             <a target="_blank" href="https://www.facebook.com/SAITSPRz">
-              <img class="social-icon" src="assets/social-icons/fb.svg" alt="logo Facebook"/>
+              <img class="social-icon" src="assets/social-icons/fb.svg" alt="logo Facebook" />
             </a>
             <a target="_blank" href="https://www.instagram.com/saits.prz/">
               <img class="social-icon" src="assets/social-icons/ig.svg" alt="logo Instagram" />
             </a>
-            <a
-              target="_blank"
-              href="https://www.youtube.com/channel/UCoUdn059OkXrwJ8qHBlD9eA"
-            >
+            <a target="_blank" href="https://www.youtube.com/channel/UCoUdn059OkXrwJ8qHBlD9eA">
               <img class="social-icon" src="assets/social-icons/yt.svg" alt="logo Youtube" />
             </a>
             <a target="_blank" href="https://saits.prz.edu.pl/">
@@ -270,23 +233,19 @@
           <ul class="footer-list">
             <li><a href="mailto:saits.prz@gmail.com">saits.prz@gmail.com</a></li>
             <li>
-              <a
-                target="_blank"
-                href="https://www.google.com/maps/place/Aleja+Powsta%C5%84c%C3%B3w+Warszawy+12,+35-959+Rzesz%C3%B3w/data=!4m2!3m1!1s0x473cfbb343ad0907:0xecdfcdf8b501fd15?sa=X&ved=2ahUKEwiT-qes04TuAhW-AxAIHdXgC8UQ8gEwAHoECAMQAQ"
-                >Wincentego Pola 2</a
-              >
+              <a target="_blank"
+                href="https://www.google.com/maps/place/Aleja+Powsta%C5%84c%C3%B3w+Warszawy+12,+35-959+Rzesz%C3%B3w/data=!4m2!3m1!1s0x473cfbb343ad0907:0xecdfcdf8b501fd15?sa=X&ved=2ahUKEwiT-qes04TuAhW-AxAIHdXgC8UQ8gEwAHoECAMQAQ">Wincentego
+                Pola 2</a>
             </li>
             <li>
-              <a
-                target="_blank"
-                href="https://www.google.com/maps/place/Aleja+Powsta%C5%84c%C3%B3w+Warszawy+12,+35-959+Rzesz%C3%B3w/data=!4m2!3m1!1s0x473cfbb343ad0907:0xecdfcdf8b501fd15?sa=X&ved=2ahUKEwiT-qes04TuAhW-AxAIHdXgC8UQ8gEwAHoECAMQAQ"
-                >35-021 Rzeszów</a
-              >
+              <a target="_blank"
+                href="https://www.google.com/maps/place/Aleja+Powsta%C5%84c%C3%B3w+Warszawy+12,+35-959+Rzesz%C3%B3w/data=!4m2!3m1!1s0x473cfbb343ad0907:0xecdfcdf8b501fd15?sa=X&ved=2ahUKEwiT-qes04TuAhW-AxAIHdXgC8UQ8gEwAHoECAMQAQ">35-021
+                Rzeszów</a>
             </li>
           </ul>
         </div>
         <div class="footer-col">
-         <!--<h5>Newsletter</h5>
+          <!--<h5>Newsletter</h5>
           <p id="newsletter-desc">
             Otrzymuj powiadomienia o kolejnych wydarzeniach
           </p>
@@ -306,10 +265,10 @@
         </div>
       </main>
       <div class="subfooter-wrapper">
-        <span id="copyright"
-          >SAITS © <span id="year"></span> wszelkie prawa zastrzeżone.</span
-        >
+        <span id="copyright">SAITS © <span id="year"></span> wszelkie prawa zastrzeżone.</span>
       </div>
     </footer>
-  </body>
+  </main>
+</body>
+
 </html>

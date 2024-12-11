@@ -1,9 +1,9 @@
 :root {
-  --main-bg: #212121;
-  --secondary-bg: #272727;
-  --green: #0fbf14;
+  --main-bg: #1a1a1a; /* Darker background for better contrast */
+  --secondary-bg: #252525;
+  --green: #39ff14; /* Brighter green for better visibility */
+  --white: #ffffff;
   --darkerGreen: #0ea51325;
-  --white: #fff;
 }
 
 * {
@@ -14,9 +14,44 @@
   color: var(--white);
 }
 
+*:focus {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.navbar-link, 
+.button, 
+p, 
+h1, h2, h3, h4, h5 {
+  color-contrast: var(--white) against var(--main-bg) minimum 4.5;
+}
+
+input, 
+textarea, 
+button {
+  font-size: 16px;
+  padding: 12px;
+  min-height: 44px; /* WCAG touch target recommendation */
+}
+
+a:hover, 
+a:focus, 
+button:hover, 
+button:focus {
+  text-decoration: underline;
 }
 
 a {
